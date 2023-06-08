@@ -122,7 +122,8 @@ endmodule
 ![image](https://github.com/Vasanthpushpa/Experiment-08-Encoders-and-decoders-/assets/119291100/618c9ae9-93c9-4932-8a3c-7f050c8037ed)
 
 ## DECODER
-![Uploading image.png…]()
+![image](https://github.com/Vasanthpushpa/Experiment-08-Encoders-and-decoders-/assets/119291100/4d01517a-2ba6-4ca6-9197-d3c485c7e7be)
+
 
 
 ### RESULTS 
