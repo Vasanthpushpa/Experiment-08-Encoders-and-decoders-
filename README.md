@@ -55,42 +55,75 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+1.Create a project with required entities.
 
+2.Create a module along with respective file name for both Multiplexer and De-multiplexer.
 
+3.Run the module and get the respective RTL outputs.
+
+4.Create university program(VWF) for getting timing diagram.
+
+5.Give the respective inputs for timing diagram and obtain the results.
 
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: VASANTH P
+RegisterNumber: 212222240113
 */
 
-
-
-
+## ENCODER
+```
+module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
+## DECODER
+```
+module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+output d0,d1,d2,d3,d4,d5,d6,d7;
+input a,b,c;
+assign d0=(~a&~b&~c);
+assign d1=(~a&~b&c);
+assign d2=(~a&b&~c);
+assign d3=(~a&b&c);
+assign d4=(a&~b&~c);
+assign d5=(a&~b&c);
+assign d6=(a&b&~c);
+assign d7=(a&b&c);
+endmodule
+```
 
 
 ### RTL LOGIC  
 
+## ENCODER
+![image](https://github.com/Vasanthpushpa/Experiment-08-Encoders-and-decoders-/assets/119291100/34306c9f-fcd7-4400-9197-4c9acd4c05ba)
 
-
-
-
-
+## DECODER
+![image](https://github.com/Vasanthpushpa/Experiment-08-Encoders-and-decoders-/assets/119291100/2356bddc-f869-4962-91c1-1d2d646ba213)
 
 
 ### TIMING DIGRAMS  
+## ENCODER
+![image](https://github.com/Vasanthpushpa/Experiment-08-Encoders-and-decoders-/assets/119291100/68a7146f-9151-4ab6-bebc-a94e8688ea91)
 
-
-
+## DECODER
+![image](https://github.com/Vasanthpushpa/Experiment-08-Encoders-and-decoders-/assets/119291100/1d0c53cd-43c4-4b54-b0d7-2e929a5b914a)
 
 
 ### TRUTH TABLE 
 
+## ENCODER
+![image](https://github.com/Vasanthpushpa/Experiment-08-Encoders-and-decoders-/assets/119291100/618c9ae9-93c9-4932-8a3c-7f050c8037ed)
 
-
-
+## DECODER
+![Uploading image.png…]()
 
 
 ### RESULTS 
+Thus the program to design encoder and decoder is done.
